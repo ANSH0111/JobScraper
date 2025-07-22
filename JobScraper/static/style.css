@@ -153,3 +153,70 @@ body.dark-mode {
 #closeTable:hover {
   color: #d90429; /* Red highlight on hover */
 }
+@media (max-width: 600px) {
+
+ .container {
+ max-width: 98vw;
+ margin: 16px 4px;
+ padding: 16px 6px;
+ border-radius: 8px;
+ }
+
+ h1 {
+ font-size: 1.6rem;
+ }
+
+ form {
+ flex-direction: column;
+ gap: 8px;
+ align-items: stretch;
+ margin-bottom: 14px;
+ }
+
+ input[type="text"], button {
+ font-size: 1em;
+ padding: 10px 8px;
+ }
+
+ table, thead, tbody, th, td, tr {
+ display: block;
+ width: 100%;
+ }
+
+ th, td {
+ padding: 8px 6px;
+ font-size: 1em;
+ }
+
+ tr {
+ margin-bottom: 16px;
+ border-bottom: 2px solid var(--border-color);
+ }
+
+ /* Hide table headers on mobile */
+ thead tr {
+ display: none;
+ }
+
+ /* Add label before table data using data-label attribute in HTML */
+ td:before {
+ content: attr(data-label);
+ display: block;
+ font-weight: bold;
+ color: var(--heading-color);
+ margin-bottom: 4px;
+ }
+
+ .results-header {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 8px;
+ margin-top: 15px;
+ }
+
+ #toggleMode {
+ font-size: 1.2rem;
+ top: 10px;
+ right: 10px;
+ }
+}
